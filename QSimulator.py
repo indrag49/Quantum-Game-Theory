@@ -61,30 +61,30 @@ def Hadamard(n): return np.array(([1., 1.], [1., -1.])).dot(n)/np.sqrt(2)
 def Hadamard4(n):
         """ This represents a 4X4 Hadamard Matrix, n is a 2-Qubit system """
         h=Hadamard(I2)
-        x=c([h, h], axis=1)
-        y=c([h, -h], axis=1)
-        h4=c([x, y])
+        x=np.concatenate([h, h], axis=1)
+        y=np.concatenate([h, -h], axis=1)
+        h4=np.concatenate([x, y])
         return h4.dot(n)
 def Hadamard8(n):
         """ This represents a 8X8 Hadamard Matrix, n is a 3-Qubit system """
         h4=Hadamard4(I4)
-        x=c([h4, h4], axis=1)
-        y=c([h4, -h4], axis=1)
-        h8=c([x, y])
+        x=np.concatenate([h4, h4], axis=1)
+        y=np.concatenate([h4, -h4], axis=1)
+        h8=np.concatenate([x, y])
         return h8.dot(n)
 def Hadamard16(n):
         """ This represents a 16X16 Hadamard Matrix, n is a 4-Qubit system """
         h8=Hadamard8(I8)
-        x=c([h8, h8], axis=1)
-        y=c([h8, -h8], axis=1)
-        h16=c([x, y])
+        x=np.concatenate([h8, h8], axis=1)
+        y=np.concatenate([h8, -h8], axis=1)
+        h16=np.concatenate([x, y])
         return h16.dot(n)
 def Hadamard32(n):
         """ This represents a 32X32 Hadamard Matrix, n is a 5-Qubit system """
         h16=Hadamard16(I16)
-        x=c([h16, h16], axis=1)
-        y=c([h16, -h16], axis=1)
-        h32=c([x, y])
+        x=np.concatenate([h16, h16], axis=1)
+        y=np.concatenate([h16, -h16], axis=1)
+        h32=np.concatenate([x, y])
         return h32.dot(n)
 
 def CNOT(n):
@@ -129,27 +129,6 @@ def CNOT3_21(n):
 def CNOT4_12(n): return np.kron(CNOT3_12(I8), I2)
 def CNOT5_12(n): return np.kron(CNOT4_12(I16), I2)
 
-def PauliX_4(n):
-        """ This represents the 4X4 pauliX matrix, with n as a 2-qubit system"""
-        p=PauliX(I2)
-        x=c([p, I2], axis=1)
-        y=c([I2, p], axis=1)
-        p4=c([x, y])
-        return p4.dot(n)
-def PauliY_4(n):
-        """ This represents the 4X4 pauliY matrix, with n as a 2-qubit system"""
-        p=PauliY(I2)
-        x=c([p, -1j*I2], axis=1)
-        y=c([1j*I2, p], axis=1)
-        p4=c([x, y])
-        return p4.dot(n)
-def PauliZ_4(n):
-        """ This represents the 4X4 pauliZ matrix, with n as a 2-qubit system"""
-        p=PauliZ(I2)
-        x=c([2*p, I2-I2], axis=1)
-        y=c([I2-I2, -2*p], axis=1)
-        p4=c([x, y])
-        return p4.dot(n)
 
 def cPauliY(n): return np.array(([1., 0., 0., 0.], [0., 1., 0., 0.], [0., 0., 0., -1.0j], [0., 0., 1.0j, 0.])).dot(n)
 def cPauliZ(n): return np.array(([1., 0., 0., 0.], [0., 1., 0., 0.], [0., 0., 1., 0.], [0., 0., 0., -1.])).dot(n)
