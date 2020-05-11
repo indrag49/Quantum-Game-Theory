@@ -211,7 +211,7 @@ def twoPerson():
                     z3=[]
                     for i in a:
                         for j in b:
-                            z1+=[gqduels(Psi, 2, i, j, alpha1, alpha2, 0, 0), ]
+                            z1+=[1-gqduels(Psi, 2, i, j, alpha1, alpha2, 0, 0), ]
                             z2+=[qduels3(Psi, i, j, alpha1, alpha2, 0, 0), ]
                             z3=np.array(z2)-np.array(z1)
                         Z1+=[z3, ]
@@ -395,7 +395,7 @@ def twoPerson():
                     z3=[]
                     for i in a:
                         for j in b:
-                            z1+=[gqduels(Psi, 2, i, j, alpha1, alpha2, 0, 0), ]
+                            z1+=[1-gqduels(Psi, 2, i, j, alpha1, alpha2, 0, 0), ]
                             z2+=[qduels3(Psi, i, j, alpha1, alpha2, 0, 0), ]
                             z3=np.array(z2)-np.array(z1)
                         Z1+=[z3, ]
@@ -579,7 +579,7 @@ def twoPerson():
                     z3=[]
                     for i in a:
                         for j in b:
-                            z1+=[gqduels(Psi, 2, i, j, alpha1, alpha2, 0, 0), ]
+                            z1+=[1-gqduels(Psi, 2, i, j, alpha1, alpha2, 0, 0), ]
                             z2+=[qduels3(Psi, i, j, alpha1, alpha2, 0, 0), ]
                             z3=np.array(z2)-np.array(z1)
                         Z1+=[z3, ]
@@ -764,7 +764,7 @@ def twoPerson():
                     z3=[]
                     for i in a:
                         for j in b:
-                            z1+=[gqduels(Psi, 2, i, j, alpha1, alpha2, 0, 0), ]
+                            z1+=[1-gqduels(Psi, 2, i, j, alpha1, alpha2, 0, 0), ]
                             z2+=[qduels3(Psi, i, j, alpha1, alpha2, 0, 0), ]
                             z3=np.array(z2)-np.array(z1)
                         Z1+=[z3, ]
@@ -949,7 +949,7 @@ def twoPerson():
                     z3=[]
                     for i in a:
                         for j in b:
-                            z1+=[gqduels(Psi, 2, i, j, alpha1, alpha2, 0, 0), ]
+                            z1+=[1-gqduels(Psi, 2, i, j, alpha1, alpha2, 0, 0), ]
                             z2+=[qduels3(Psi, i, j, alpha1, alpha2, 0, 0), ]
                             z3=np.array(z2)-np.array(z1)
                         Z1+=[z3, ]
@@ -1134,7 +1134,7 @@ def twoPerson():
                     z3=[]
                     for i in a:
                         for j in b:
-                            z1+=[gqduels(Psi, 2, i, j, alpha1, alpha2, 0, 0), ]
+                            z1+=[1-gqduels(Psi, 2, i, j, alpha1, alpha2, 0, 0), ]
                             z2+=[qduels3(Psi, i, j, alpha1, alpha2, 0, 0), ]
                             z3=np.array(z2)-np.array(z1)
                         Z1+=[z3, ]
